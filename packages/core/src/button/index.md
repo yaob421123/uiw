@@ -1,401 +1,192 @@
-Button 按钮
-===
+#Animate.css
+*Just-add-water CSS animation*
 
-按钮用于开始一个即时操作，触发业务逻辑时使用。
+`animate.css` is a bunch of cool, fun, and cross-browser animations for you to use in your projects. Great for emphasis, home pages, sliders, and general just-add-water-awesomeness.
 
-```jsx
-import { Button, ButtonGroup } from '@uiw/core';
+##Basic Usage
+1. Include the stylesheet on your document's `<head>`
+
+  ```html
+  <head>
+    <link rel="stylesheet" href="animate.min.css">
+  </head>
+  ```
+2. Add the class `animated` to the element you want to animate.
+ You may also want to include the class `infinite` for an infinite loop.
+
+3. Finally you need to add one of the following classes:
+
+  * `bounce`
+  * `flash`
+  * `pulse`
+  * `rubberBand`
+  * `shake`
+  * `headShake`
+  * `swing`
+  * `tada`
+  * `wobble`
+  * `jello`
+  * `bounceIn`
+  * `bounceInDown`
+  * `bounceInLeft`
+  * `bounceInRight`
+  * `bounceInUp`
+  * `bounceOut`
+  * `bounceOutDown`
+  * `bounceOutLeft`
+  * `bounceOutRight`
+  * `bounceOutUp`
+  * `fadeIn`
+  * `fadeInDown`
+  * `fadeInDownBig`
+  * `fadeInLeft`
+  * `fadeInLeftBig`
+  * `fadeInRight`
+  * `fadeInRightBig`
+  * `fadeInUp`
+  * `fadeInUpBig`
+  * `fadeOut`
+  * `fadeOutDown`
+  * `fadeOutDownBig`
+  * `fadeOutLeft`
+  * `fadeOutLeftBig`
+  * `fadeOutRight`
+  * `fadeOutRightBig`
+  * `fadeOutUp`
+  * `fadeOutUpBig`
+  * `flipInX`
+  * `flipInY`
+  * `flipOutX`
+  * `flipOutY`
+  * `lightSpeedIn`
+  * `lightSpeedOut`
+  * `rotateIn`
+  * `rotateInDownLeft`
+  * `rotateInDownRight`
+  * `rotateInUpLeft`
+  * `rotateInUpRight`
+  * `rotateOut`
+  * `rotateOutDownLeft`
+  * `rotateOutDownRight`
+  * `rotateOutUpLeft`
+  * `rotateOutUpRight`
+  * `hinge`
+  * `rollIn`
+  * `rollOut`
+  * `zoomIn`
+  * `zoomInDown`
+  * `zoomInLeft`
+  * `zoomInRight`
+  * `zoomInUp`
+  * `zoomOut`
+  * `zoomOutDown`
+  * `zoomOutLeft`
+  * `zoomOutRight`
+  * `zoomOutUp`
+  * `slideInDown`
+  * `slideInLeft`
+  * `slideInRight`
+  * `slideInUp`
+  * `slideOutDown`
+  * `slideOutLeft`
+  * `slideOutRight`
+  * `slideOutUp`
+
+Full example:
+```html
+<h1 class="animated infinite bounce">Example</h1>
 ```
 
-### 基本用法
+[Check out all the animations here!](https://daneden.github.io/animate.css/)
 
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <Button>Normal</Button>
-    <Button disabled>Disabled</Button>
-    <Button type="primary" active>Button</Button>
-    <Button type="primary" size="small">more <Icon type="arrow-down" /></Button>
-    <Button type="link"> (超连接样式)link </Button>
-    <Divider style={{ maxWidth: 220 }}>状态按钮</Divider>
-    <Button type="primary">主要按钮</Button>
-    <Button type="success">成功按钮</Button>
-    <Button type="warning">警告按钮</Button>
-    <Button type="danger">错误按钮</Button>
-    <Button type="light">亮按钮</Button>
-    <Button type="dark">暗按钮</Button>
-    <Divider style={{ maxWidth: 220 }}>基本按钮</Divider>
-    <Button basic type="primary">主要按钮</Button>
-    <Button basic type="success">成功按钮</Button>
-    <Button basic type="warning">警告按钮</Button>
-    <Button basic type="danger">错误按钮</Button>
-    <Button basic type="light">亮按钮</Button>
-    <Button basic type="dark">暗按钮</Button>
-  </div>
-);
+##Usage
+To use animate.css in your website, simply drop the stylesheet into your document's `<head>`, and add the class `animated` to an element, along with any of the animation names. That's it! You've got a CSS animated element. Super!
+
+```html
+<head>
+  <link rel="stylesheet" href="animate.min.css">
+</head>
 ```
-<!--End-->
 
-### 按钮组
+You can do a whole bunch of other stuff with animate.css when you combine it with jQuery or add your own CSS rules. Dynamically add animations using jQuery with ease:
 
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <ButtonGroup>
-      <Button type="primary">主要按钮</Button>
-      <Button type="success">成功按钮</Button>
-      <Button type="warning">警告按钮</Button>
-      <Button type="danger">错误按钮</Button>
-      <Button type="light">亮按钮</Button>
-      <Button type="dark">暗按钮</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button size="small" type="primary">按钮</Button>
-      <Button size="small" type="primary">按钮</Button>
-      <Button size="small" type="primary">按钮</Button>
-      <Button size="small" type="primary">按钮</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button type="light">按钮</Button>
-      <Button type="light">按钮</Button>
-      <Button type="light">按钮</Button>
-      <Button type="light">按钮</Button>
-    </ButtonGroup>
-    <Divider style={{ maxWidth: 220 }}>添加图标</Divider>
-    <ButtonGroup>
-      <Button icon="copy" type="primary">复制</Button>
-      <Button icon="delete" type="success">删除</Button>
-      <Button icon="file-add" type="warning">添加文件</Button>
-      <Button icon="map" type="danger">地图</Button>
-      <Button icon="linux" type="light">Linux</Button>
-      <Button icon="apple" type="dark">Apple</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button icon="copy" type="primary">复制</Button>
-      <Button icon="delete" type="primary">删除</Button>
-      <Button icon="file-add" type="primary">添加文件</Button>
-      <Button icon="map" type="primary">地图</Button>
-      <Button icon="linux" type="primary">Linux</Button>
-      <Button icon="apple" type="primary">Apple</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button icon="copy">复制</Button>
-      <Button icon="delete">删除</Button>
-      <Button icon="file-add">添加文件</Button>
-      <Button icon="map">地图</Button>
-      <Button icon="linux">Linux</Button>
-      <Button icon="apple">Apple</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button icon="copy" />
-      <Button icon="delete" />
-      <Button icon="file-add" />
-      <Button icon="map" />
-      <Button icon="linux" />
-      <Button icon="apple" />
-    </ButtonGroup>
-  </div>
-);
+```javascript
+$('#yourElement').addClass('animated bounceOutLeft');
 ```
-<!--End-->
 
-### 图标按钮
+You can also detect when an animation ends:
 
-<!--DemoStart--> 
-```js
-const chat = <svg width="20" height="20" viewBox="0 0 20 20"> <path d="M19 0H7c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h5.59l3.71 3.71c.17.18.42.29.7.29.55 0 1-.45 1-1v-3h1c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1zM7 13c-1.1 0-2-.9-2-2V4H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h1v3a1.003 1.003 0 0 0 1.71.71L7.41 16H13c.55 0 1-.45 1-1v-.17L12.17 13H7z" fillRule="evenodd" /> </svg>;
-const open = <svg width="12" height="16" style={{ height: 16 }}> <path fillRule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /> </svg>;
-const merged = <svg width="12" height="16" viewBox="0 0 12 16" style={{ height: 16 }}> <path fillRule="evenodd" d="M10 7c-.73 0-1.38.41-1.73 1.02V8C7.22 7.98 6 7.64 5.14 6.98c-.75-.58-1.5-1.61-1.89-2.44A1.993 1.993 0 0 0 2 .99C.89.99 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2a1.993 1.993 0 0 0 1-3.72V7.67c.67.7 1.44 1.27 2.3 1.69.86.42 2.03.63 2.97.64v-.02c.36.61 1 1.02 1.73 1.02 1.11 0 2-.89 2-2 0-1.11-.89-2-2-2zm-6.8 6c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm8 6c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /> </svg>;
-const closed = <svg viewBox="0 0 16 16" width="16" height="16"> <path fillRule="evenodd" d="M7 10h2v2H7v-2zm2-6H7v5h2V4zm1.5 1.5l-1 1L12 9l4-4.5-1-1L12 7l-1.5-1.5zM8 13.7A5.71 5.71 0 0 1 2.3 8c0-3.14 2.56-5.7 5.7-5.7 1.83 0 3.45.88 4.5 2.2l.92-.92A6.947 6.947 0 0 0 8 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7l-1.52 1.52c-.66 2.41-2.86 4.19-5.48 4.19v-.01z" /> </svg>;
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <Button icon="weibo" type="primary">主要按钮</Button>
-    <Button icon="chrome" type="success">成功按钮</Button>
-    <Button icon="taobao" type="warning">警告按钮</Button>
-    <Button icon="weibo" type="danger" />
-    <Button type="danger">
-      <Icon type="reload" spin={true} />
-      <span>错误<span>按钮</span></span>
-      <Icon type="weibo" />
-    </Button>
-    <Button icon="chrome" type="light">亮按钮</Button>
-    <Button icon="apple" type="dark">暗按钮</Button>
-    <Button icon={chat} type="dark">暗按钮</Button>
-    <Divider style={{ maxWidth: 220 }}>GitHub</Divider>
-    <Button icon={open} type="success">Open</Button>
-    <Button icon={merged} type="light" style={{ backgroundColor: '#6f42c1', color: '#fff' }}>Merged</Button>
-    <Button icon={closed} type="danger">Closed</Button>
-  </div>
-);
+<!--
+Before you make changes to this file, you should know that $('#yourElement').one() is *NOT A TYPO*
+
+http://api.jquery.com/one/
+-->
+
+```javascript
+$('#yourElement').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
 ```
-<!--End-->
 
-### 禁用按钮组
+[View a video tutorial](https://www.youtube.com/watch?v=CBQGl6zokMs) on how to use Animate.css with jQuery here. 
 
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <ButtonGroup>
-      <Button disabled type="primary">主要按钮</Button>
-      <Button disabled type="success">成功按钮</Button>
-      <Button disabled type="warning">警告按钮</Button>
-      <Button disabled type="danger">错误按钮</Button>
-      <Button disabled type="light">亮按钮</Button>
-      <Button disabled type="dark">暗按钮</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button disabled type="primary">按钮</Button>
-      <Button disabled type="primary">按钮</Button>
-      <Button disabled type="primary">按钮</Button>
-      <Button disabled type="primary">按钮</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button disabled type="light">按钮</Button>
-      <Button disabled type="light">按钮</Button>
-      <Button type="light">按钮</Button>
-      <Button disabled type="light">按钮</Button>
-    </ButtonGroup>
-    <Divider style={{ maxWidth: 220 }}>添加图标</Divider>
-    <ButtonGroup>
-      <Button disabled icon="copy" type="primary">复制</Button>
-      <Button disabled icon="delete" type="success">删除</Button>
-      <Button disabled icon="file-add" type="warning">添加文件</Button>
-      <Button disabled icon="map" type="danger">地图</Button>
-      <Button disabled icon="linux" type="light">Linux</Button>
-      <Button disabled icon="apple" type="dark">Apple</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button disabled icon="copy" type="primary">复制</Button>
-      <Button disabled icon="delete" type="primary">删除</Button>
-      <Button icon="file-add" type="primary">添加文件</Button>
-      <Button disabled icon="map" type="primary">地图</Button>
-      <Button disabled icon="linux" type="primary">Linux</Button>
-      <Button disabled icon="apple" type="primary">Apple</Button>
-    </ButtonGroup>
-    <ButtonGroup style={{ marginTop: 5 }}>
-      <Button disabled icon="copy">复制</Button>
-      <Button disabled icon="delete">删除</Button>
-      <Button disabled icon="file-add">添加文件</Button>
-      <Button disabled icon="map">地图</Button>
-      <Button disabled icon="linux">Linux</Button>
-      <Button disabled icon="apple">Apple</Button>
-    </ButtonGroup>
-    <div style={{ marginTop: 5 }}>
-      <Button disabled icon="weibo" basic type="primary" />
-      <Button disabled icon="chrome" basic type="success" />
-      <Button disabled icon="taobao" basic type="warning" />
-      <Button disabled icon="apple" basic type="danger" />
-      <Button disabled icon="weibo" basic type="dark" />
-    </div>
-  </div>
-);
+**Note:** `jQuery.one()` is used when you want to execute the event handler at most *once*. More information [here](http://api.jquery.com/one/).
+
+You can also extend jQuery to add a function that does it all for you:
+
+```javascript
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+    }
+});
 ```
-<!--End-->
 
-### 垂直按钮组
+And use it like this:
 
-<!--DemoStart--> 
-```js
-const Demo = () => (
-    <Row gutter={10}>
-      <Col style={{ maxWidth: 120 }}>
-        <ButtonGroup vertical>
-          <Button type="primary">按钮</Button>
-          <Button type="primary">按钮</Button>
-          <Button type="primary">按钮</Button>
-          <Button type="primary">按钮</Button>
-        </ButtonGroup>
-      </Col>
-      <Col style={{ maxWidth: 120 }}>
-        <ButtonGroup vertical>
-          <Button type="success">按钮</Button>
-          <Button disabled type="success">按钮</Button>
-          <Button type="success">按钮</Button>
-          <Button type="success">按钮</Button>
-        </ButtonGroup>
-      </Col>
-      <Col style={{ maxWidth: 120 }}>
-        <ButtonGroup vertical>
-          <Button type="light">按钮</Button>
-          <Button type="light">按钮</Button>
-          <Button type="light">按钮</Button>
-          <Button type="light">按钮</Button>
-        </ButtonGroup>
-      </Col>
-      <Col style={{ maxWidth: 120 }}>
-        <ButtonGroup vertical>
-          <Button type="primary">主要按钮</Button>
-          <Button type="success">成功按钮</Button>
-          <Button type="warning">警告按钮</Button>
-          <Button type="danger">错误按钮</Button>
-          <Button type="light">亮按钮</Button>
-          <Button type="dark">暗按钮</Button>
-        </ButtonGroup>
-      </Col>
-    </Row>
-);
+```javascript
+$('#yourElement').animateCss('bounce');
 ```
-<!--End-->
 
-### 基本按钮
+You can change the duration of your animations, add a delay or change the number of times that it plays:
 
-设置 `basic=true` 即可获得基本按钮，没有背景颜色的状态按钮。
-
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <Button basic type="primary">主要按钮</Button>
-    <Button basic type="success">成功按钮</Button>
-    <Button basic type="warning">警告按钮</Button>
-    <Button basic type="danger">错误按钮</Button>
-    <Button basic type="light">亮按钮</Button>
-    <Button basic type="dark">暗按钮</Button>
-    <Divider style={{ maxWidth: 220 }}>激活</Divider>
-    <Button basic active type="primary">主要按钮</Button>
-    <Button basic active type="success">成功按钮</Button>
-    <Button basic active type="warning">警告按钮</Button>
-    <Button basic active type="danger">错误按钮</Button>
-    <Button basic active type="light">亮按钮</Button>
-    <Button basic active type="dark">暗按钮</Button>
-    <Divider style={{ maxWidth: 220 }}>禁用</Divider>
-    <Button basic disabled type="primary">主要按钮</Button>
-    <Button basic disabled type="success">成功按钮</Button>
-    <Button basic disabled type="warning">警告按钮</Button>
-    <Button basic disabled type="danger">错误按钮</Button>
-    <Button basic disabled type="light">亮按钮</Button>
-    <Button basic disabled type="dark">暗按钮</Button>
-  </div>
-);
+```css
+#yourElement {
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
+  -vendor-animation-iteration-count: infinite;
+}
 ```
-<!--End-->
 
-### 基础按钮添加图标
+*Note: be sure to replace "vendor" in the CSS with the applicable vendor prefixes (webkit, moz, etc)*
 
-设置 `basic=true` 即可获得基本按钮，没有背景颜色的状态按钮。
+## Custom Builds
+Animate.css is powered by [gulp.js](http://gulpjs.com/), and you can create custom builds pretty easily. First of all, you’ll need Gulp and all other dependencies:
 
-<!--DemoStart--> 
-```js
-const chat = (
-  <svg width="20" height="20" viewBox="0 0 20 20">
-    <path d="M19 0H7c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h5.59l3.71 3.71c.17.18.42.29.7.29.55 0 1-.45 1-1v-3h1c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1zM7 13c-1.1 0-2-.9-2-2V4H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h1v3a1.003 1.003 0 0 0 1.71.71L7.41 16H13c.55 0 1-.45 1-1v-.17L12.17 13H7z" fillRule="evenodd" />
-  </svg>
-)
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <Button icon="weibo" basic type="primary">主要按钮</Button>
-    <Button icon="chrome" basic type="success">成功按钮</Button>
-    <Button icon="taobao" basic type="warning">警告按钮</Button>
-    <Button icon="apple" basic type="danger">错误按钮</Button>
-    <Button icon="weibo" basic type="dark">暗按钮</Button>
-    <Divider />
-    <Button icon="weibo" basic type="primary" />
-    <Button icon="chrome" basic type="success" />
-    <Button icon="taobao" basic type="warning" />
-    <Button icon="apple" basic type="danger" />
-    <Button icon="weibo" basic type="dark" />
-  </div>
-);
+```sh
+$ cd path/to/animate.css/
+$ sudo npm install
 ```
-<!--End-->
 
-### 激活按钮样式
+Next, run `gulp` to compile your custom builds. For example, if you want only some of the the “attention seekers”, simply edit the `animate-config.json` file to select only the animations you want to use.
 
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <Button active type="primary">主要按钮</Button>
-    <Button active type="success">成功按钮</Button>
-    <Button active type="warning">警告按钮</Button>
-    <Button active type="danger">错误按钮</Button>
-    <Button active type="light">亮按钮</Button>
-    <Button active type="dark">暗按钮</Button>
-    <Button active type="link"> (超连接样式)link </Button>
-  </div>
-);
+```javascript
+"attention_seekers": {
+  "bounce": true,
+  "flash": false,
+  "pulse": false,
+  "shake": true,
+  "headShake": true,
+  "swing": true,
+  "tada": true,
+  "wobble": true,
+  "jello":true
+}
 ```
-<!--End-->
 
-### 禁用按钮样式
+## License
+Animate.css is licensed under the MIT license. (http://opensource.org/licenses/MIT)
 
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div style={{ backgroundColor: '#fff', margin: -15, padding: 15, borderRadius: '5px 5px 0 0' }}>
-    <Button disabled type="primary">主要按钮</Button>
-    <Button disabled type="success">成功按钮</Button>
-    <Button disabled type="warning">警告按钮</Button>
-    <Button disabled type="danger">错误按钮</Button>
-    <Button disabled type="light">亮按钮</Button>
-    <Button disabled type="dark">暗按钮</Button>
-    <Button disabled type="link"> (超连接样式)link </Button>
-  </div>
-);
-```
-<!--End-->
-
-
-### block
-
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div>
-    <Button block type="primary">主要按钮</Button>
-    <Button block type="success">成功按钮</Button>
-    <Button block type="warning">警告按钮</Button>
-    <Button block type="danger">错误按钮</Button>
-    <Button block type="light">亮按钮</Button>
-    <Button block type="dark">暗按钮</Button>
-  </div>
-);
-```
-<!--End-->
-
-### size大小
-
-`size` 在 `Button.Group`下面不支持。
-
-<!--DemoStart--> 
-```js
-const Demo = () => (
-  <div>
-    <Button size="small" type="primary">主要按钮</Button>
-    <Button size="default" type="success">成功按钮</Button>
-    <Button size="large" type="warning">警告按钮</Button>
-    <Button size="small" type="danger">错误按钮</Button>
-    <Button size="default" type="light">亮按钮</Button>
-    <Button size="large" type="dark">暗按钮</Button>
-    <Divider />
-    <Button icon="weibo" size="small" type="primary">微博</Button>
-    <Button icon="chrome" size="small" type="success">谷歌浏览器</Button>
-    <Button icon="chrome" type="success">谷歌浏览器</Button>
-    <Button icon="apple" size="large" type="warning">淘宝</Button>
-  </div>
-);
-```
-<!--End-->
-
-
-## Button
-
-| 参数 | 说明 | 类型 | 默认值 |
-| -------- | -------- | -------- | -------- |
-| size | `large`, `default`, `small` |String | `default` |
-| type | `primary`, `success`, `warning`, `danger`, `light`, `dark`, `link` | String/ReactNode | - |
-| htmlType | 设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type) |String | `button` |
-| icon | 设置按钮的图标类型 | String/ReactNode | - |
-| block | 通过设置属性 `block` 可将按钮宽度设置为 100%，（块级元素），常用于弹窗内操作按钮。 |Boolean | false |
-| disabled | 禁用状态 | Boolean | false |
-| active | 激活状态，其表现为被按压下去（底色更深、边框夜色更深、向内投射阴影）。 |Boolean | false |
-| loading | 加载中状态 | Boolean | false |
-
-## Button.Group
-
-| 参数 | 说明 | 类型 | 默认值 |
-| -------- | -------- | -------- | -------- |
-| vertical | 竖排列 | Boolean | `false` |
+## Contributing
+Pull requests are the way to go here. I apologise in advance for the slow action on pull requests and issues. I only have two rules for submitting a pull request: match the naming convention (camelCase, categorised [fades, bounces, etc]) and let us see a demo of submitted animations in a [pen](http://codepen.io). That last one is important.
